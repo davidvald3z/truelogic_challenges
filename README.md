@@ -1,24 +1,29 @@
-# README
+# Weather and Soccer Challenges
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+**Ruby version:** 3.2.3  
+**Rails version:** 7.1.4
 
-Things you may want to cover:
+## Project Overview
 
-* Ruby version
+This project contains two modules that implement the logic for the weather and soccer challenges. These modules are executed through a Rake file.
 
-* System dependencies
+## Challenges Overview
 
-* Configuration
+### 1. Weather Data Challenge
+The task is to identify the day with the smallest temperature spread from a weather data file.
 
-* Database creation
+- **Data File:** `lib/data/w_data.dat`
+- **Module:** `app/models/weather_data.rb`
+- **Task:** `challenges:weather`
+- **How to run:** `bundle exec rake challenges:weather`
 
-* Database initialization
+### 2. Soccer Data Challenge
+The task is to identify the soccer team with the smallest difference between the goals scored ("goals for") and goals conceded ("goals against") from a soccer data file.
 
-* How to run the test suite
+- **Data File:** `lib/data/soccer.dat`
+- **Module:** `app/models/soccer_data.rb`
+- **Task:** `challenges:soccer`
+- **How to run:** `bundle exec rake challenges:soccer`
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### How to Run Both Tasks
+- **Command:** `bundle exec rake challenges:all`
