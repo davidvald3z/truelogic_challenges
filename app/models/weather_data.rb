@@ -2,10 +2,10 @@ module WeatherData
     def self.find_min_temp_spread
         file_path = "lib/data/w_data.dat"
 
-        min_temp_spread = 999
-        min_temp_spread_day = 0
-
         if File.exist?(file_path)
+            min_temp_spread = 999
+            min_temp_spread_day = 0
+
             File.foreach(file_path) do |line|
                 day = line.slice(2,4)
                 next unless day && day.strip.to_i > 0
